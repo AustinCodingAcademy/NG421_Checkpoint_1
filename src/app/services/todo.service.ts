@@ -16,14 +16,14 @@ export class TodoService {
      },
      { 
       title: 'Draw for 2 hours', 
-      id: this.todoId, 
+      id: this.todoId++, 
       status:'Todo',
       createdAt:new Date(),
       description: ""
      },
      { 
       title: 'Finish Checkpoint', 
-      id: this.todoId, 
+      id: this.todoId++, 
       status:'Todo',
       createdAt:new Date(),
       description: ""
@@ -32,7 +32,7 @@ export class TodoService {
   statuses: ["Todo", "Doing", "Done"] ;
 
   constructor() { 
-    this.todoList = this.todoList;
+
   }
   getTodos(status: string){
     if(status){
@@ -50,6 +50,6 @@ export class TodoService {
     this.todoList.push(todo);
   }
   getStatuses() {
-    return [this.statuses];
+    return this.statuses;
   }
 }
