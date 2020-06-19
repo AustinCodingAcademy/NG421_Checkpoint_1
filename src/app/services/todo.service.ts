@@ -4,16 +4,16 @@ import {ITodo} from '../interfaces/itodo';
   providedIn: 'root'
 })
 export class TodoService {
-  todoId: number = 0;
+  todoId = 0;
   todoList: ITodo [] = [
     // example of how to make an item in todo list
     { title: 'Install Angular CLI', id: this.todoId, status: 'Todo', description: '', createdAt: new Date() },
-  ]
-  statuses: string[] = ['Todo', 'Doing', 'Done']
+  ];
+  statuses: string[] = ['Todo', 'Doing', 'Done'];
 
   constructor() { }
-  getTodos(status?: string){
-    if(status === undefined){
+  getTodos(status?: string) {
+    if (status === undefined) {
       return this.todoList;
     }
     return this.todoList.filter(t => t.status === status);
