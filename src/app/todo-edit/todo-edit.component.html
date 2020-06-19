@@ -1,4 +1,5 @@
-<div>
-    <label>Enter a description:</label>
-    <input>
+<div text-align="center">
+    <label>Enter a description for <strong>{{this.todo.title}}</strong>:</label>
+    <input [(ngModel)]="this.todo.description">
+    <!-- <button class="btn btn-sm btn-outline-info">Save</button> -->
   </div>
