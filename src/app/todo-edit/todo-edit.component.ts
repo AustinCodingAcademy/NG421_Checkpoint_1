@@ -17,4 +17,7 @@ export class TodoEditComponent implements OnInit {
   edit() {
     this.modalInstance.close(this.newDescription);
   }
+  close() {
+    this.modalInstance.close();
+  }
 }

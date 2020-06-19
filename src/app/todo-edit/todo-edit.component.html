@@ -1,5 +1,5 @@
-<div text-align="center">
+<div>
     <label>Enter a description for <strong>{{this.todo.title}}</strong>:</label>
-    <input [(ngModel)]="this.todo.description">
+    <input [(ngModel)]="this.todo.description" (keyup.enter)=close()>
     <!-- <button class="btn btn-sm btn-outline-info">Save</button> -->
   </div>
