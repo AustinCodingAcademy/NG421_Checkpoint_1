@@ -29,4 +29,7 @@ export class TodoService {
   getStatuses(): string[] {
     return this.statuses;
   }
+  editTodo(todo) {
+
+  }
 }
