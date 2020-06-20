@@ -1,7 +1,7 @@
 <div class="view">
     <div class="float-left">
         <label *ngIf="!isEditing" (dblclick)="isEditing=true">{{todo.title}}</label>
-        <input (blur)="isEditing=false" *ngIf="isEditing" [(ngModel)]="todo.title">
+        <input (blur)="isEditing=false" (keyup.enter)="isEditing=false" *ngIf="isEditing" [(ngModel)]="todo.title">
         <p *ngIf="todo.description!=''">{{todo.description}}</p>
     </div>
     <div class="float-right">

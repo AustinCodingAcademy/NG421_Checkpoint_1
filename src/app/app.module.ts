@@ -10,6 +10,7 @@ import { ConfirmationModalComponent } from './confirmation-modal/confirmation-mo
 import {RouterModule } from '@angular/router';
 import { BoardComponent } from './board/board.component';
 import { TodoEditComponent } from './todo-edit/todo-edit.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes = [];
 const appRoutes = RouterModule.forRoot(routes);
@@ -28,7 +29,8 @@ const appRoutes = RouterModule.forRoot(routes);
     BrowserModule,
     appRoutes,
     FormsModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
