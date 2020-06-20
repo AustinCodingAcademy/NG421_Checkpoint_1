@@ -1,7 +1,7 @@
 <div class="view">
     <div class="float-left">
         <label *ngIf="!isEditing" (dblclick)="isEditing=true">{{todo.title}}</label>
-        <input (blur)="isEditing=false" (keyup.enter)="isEditing=false" *ngIf="isEditing" [(ngModel)]="todo.title">
+        <input (blur)="isEditing=false" (keyup.enter)="isEditing=false" *ngIf="isEditing" [(ngModel)]="todo.title" mat-input>
         <p *ngIf="todo.description!=''">{{todo.description}}</p>
     </div>
     <div class="float-right">
@@ -9,7 +9,7 @@
         <br />
         <button type="button" (click)=deleteTodo(todo) class="btn btn-outline-danger btn-sm">Delete</button>
         <br />
-        <select name="status" [(ngModel)]="todo.status" class="custom-select custom-select-sm">
+        <select name="status" [(ngModel)]="todo.status" class="custom-select custom-select-sm" mat-input>
             <option *ngFor="let status of statuses" [value]="status">{{status}}</option>
         </select>
     </div>

@@ -4,6 +4,7 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import { ConfirmationModalComponent } from '../confirmation-modal/confirmation-modal.component';
 import { TodoEditComponent } from '../todo-edit/todo-edit.component';
 
+
 @Component({
   selector: 'app-todo',
   templateUrl: './todo.component.html',
