@@ -3,7 +3,7 @@ import { ITodo } from '../interfaces/itodo';
 import { TodoService } from '../services/todo.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
-
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-todo-table',
@@ -15,7 +15,7 @@ export class TodoTableComponent implements OnInit {
   displayedColumns: string[] = ['title', 'description', 'status', 'createdAt'];
   dataSource: MatTableDataSource<ITodo>;
 
-  constructor(private todoService: TodoService) { }
+  constructor(private todoService: TodoService, private routerService: ActivatedRoute) { }
 
   ngOnInit() {
     this.dataSource = new MatTableDataSource(this.todoService.getTodos());
