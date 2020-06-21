@@ -1,8 +1,7 @@
-<h2 align="center">ToDo List</h2>
-<!-- <mat-form-field appearance="outline">
+<mat-form-field>
     <mat-label>Filter</mat-label>
-    <input (keyup)="applyFilter($event.target.value)" placeholder="Ex. ium" matInput>
-</mat-form-field> -->
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="What are you looking for?" >
+</mat-form-field>
 <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z5" align="center" width="80%">
     <ng-container matColumnDef="title">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
