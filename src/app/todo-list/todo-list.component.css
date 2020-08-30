@@ -1,4 +1,4 @@
-li{
-    color: rgb(179, 7, 121);
-
+.list-group-item{
+    background-color: #ecc64b;
+    color: #cd5c5c;
 }

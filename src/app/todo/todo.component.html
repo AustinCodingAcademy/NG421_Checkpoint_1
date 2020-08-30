@@ -8,7 +8,7 @@
         <select name="status" [(ngModel)]="todo.status" class="custom-select custom-select-sm" mat-input>
             <option *ngFor="let status of statuses" [value]="status">{{status}}</option>
         </select>
-        <button type="button" (click)=editTodo(todo) class="btn btn-outline-secondary btn-sm">Edit</button>
+        <button type="button" (click)=editTodo(todo) class="btn btn-outline-info btn-sm">Edit</button>
         <button type="button" (click)=deleteTodo(todo) class="btn btn-outline-danger btn-sm">Delete</button>
         
     </div>
