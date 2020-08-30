@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TodoService } from '../services/todo.service';
 
 @Component({
   selector: 'app-board',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./board.component.css']
 })
 export class BoardComponent implements OnInit {
-
-  constructor() { }
+  statuses: string[];
+  constructor(private todoService: TodoService) { }
 
   ngOnInit() {
+    this.statuses = this.todoService.statuses;
   }
 
 }
