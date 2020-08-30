@@ -1,9 +1,11 @@
 <div class="form-group">
     <!-- You will want to change this label later on but for now it can stay as-is -->
-    <label for="dateOfBirth">Are you sure you want to delete this item?</label>
-    <div class="input-group">
-      <div class="input-group-append">
+    <label>Are you sure you want to delete this item?</label>
+    <div>
+      <div class="">
           <button type="button" class="btn btn-danger btn-sm" (click)="yes()">Yes, delete</button>
+          <button type="button" class="btn btn-secondary btn-sm" (click)="close()">Nope</button>
       </div>
     </div>
   </div>
+  

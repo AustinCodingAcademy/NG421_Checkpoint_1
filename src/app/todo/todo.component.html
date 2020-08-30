@@ -1,6 +1,15 @@
 <div class="view">
-    <label>{{todo.title}}</label>
-    <div class="float-right">
-        <button type="button" (click)= deleteTodo(todo) class="btn btn-danger btn-sm">Delete</button>
+    <div class="text-center">
+        <label *ngIf="!isEditing" (dblclick)="isEditing=true" [ngClass]="{'doing' : todo.status === 'Doing', 'done' : todo.status === 'Done'}">{{todo.title}}</label>
+        <input (blur)="isEditing=false" (keyup.enter)="isEditing=false" *ngIf="isEditing" [(ngModel)]="todo.title" mat-input>
+        <p *ngIf="todo.description!=''">{{todo.description}}</p>
+    </div>
+    <div class="text-center">
+        <select name="status" [(ngModel)]="todo.status" class="custom-select custom-select-sm" mat-input>
+            <option *ngFor="let status of statuses" [value]="status">{{status}}</option>
+        </select>
+        <button type="button" (click)=editTodo(todo) class="btn btn-outline-info btn-sm">Edit</button>
+        <button type="button" (click)=deleteTodo(todo) class="btn btn-outline-danger btn-sm">Delete</button>
+        
     </div>
 </div>
